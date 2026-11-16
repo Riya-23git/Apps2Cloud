@@ -1,0 +1,132 @@
+/* ═══════════════════════════════════════════════
+   MODERN CARDS & WIDGETS — shared across every page.
+   Loaded after the page stylesheets (see App.js) so it wins on equal specificity.
+═══════════════════════════════════════════════ */
+:root{
+  --card-surface:linear-gradient(180deg,rgba(214,211,209,.07),rgba(214,211,209,.025));
+  --card-edge:linear-gradient(160deg,rgba(214,211,209,.28),rgba(214,211,209,.06) 40%,rgba(214,211,209,.04) 70%,rgba(251,146,60,.22));
+  --card-edge-hover:linear-gradient(160deg,var(--blue),rgba(253,186,116,.35) 45%,rgba(214,211,209,.08) 70%,var(--orange));
+  --card-shadow:0 1px 0 rgba(255,255,255,.05) inset,0 18px 40px -18px rgba(16,15,15,.7);
+  --card-shadow-hover:0 1px 0 rgba(255,255,255,.07) inset,0 28px 60px -20px rgba(16,15,15,.8),0 0 0 1px rgba(251,146,60,.1);
+  --card-r:22px;
+  --card-base:#201e1d;
+}
+[data-theme="light"]{
+  --card-base:#ffffff;
+  --card-surface:linear-gradient(180deg,#ffffff,#fefdfc);
+  --card-edge:linear-gradient(160deg,rgba(194,65,12,.22),rgba(31,30,28,.06) 40%,rgba(31,30,28,.05) 70%,rgba(234,88,12,.18));
+  --card-shadow:0 1px 2px rgba(31,30,28,.04),0 14px 34px -16px rgba(31,30,28,.16);
+  --card-shadow-hover:0 1px 2px rgba(31,30,28,.05),0 26px 50px -18px rgba(194,65,12,.28);
+}
+
+/* ── the card ── */
+.gcard,
+.svc-card,.svcp-other-card,.sdp-other-card,
+.contact-item,.career-job-card,.pg-card,.zz-mini,
+.hx-promise,.hx-faq-i,.hx-stat,.zz-card{
+  position:relative;
+  background:var(--card-surface) padding-box,linear-gradient(var(--card-base),var(--card-base)) padding-box,var(--card-edge) border-box;
+  border:1px solid transparent;
+  border-radius:var(--card-r);
+  box-shadow:var(--card-shadow);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  transition:transform .35s var(--ease-out),box-shadow .35s,background .35s;
+}
+.gcard:hover,
+.svc-card:hover,.svcp-other-card:hover,.sdp-other-card:hover,
+.contact-item:hover,.career-job-card:hover,.pg-card:hover,.zz-mini:hover,
+.hx-promise:hover,.zz-card:hover{
+  background:var(--card-surface) padding-box,linear-gradient(var(--card-base),var(--card-base)) padding-box,var(--card-edge-hover) border-box;
+  box-shadow:var(--card-shadow-hover);
+  transform:translateY(-5px);
+  border-color:transparent;
+}
+/* soft spotlight in the top corner of every card */
+.gcard::after,.svc-card::after,.pg-card::after,.career-job-card::after{
+  content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:0;
+  background:radial-gradient(420px circle at 0% 0%,color-mix(in srgb,var(--blue) 12%,transparent),transparent 45%);
+  opacity:.8;transition:opacity .35s;
+}
+.gcard:hover::after,.svc-card:hover::after,.pg-card:hover::after,.career-job-card:hover::after{opacity:1}
+.gcard>*,.svc-card>*,.career-job-card>*{position:relative;z-index:1}
+.career-job-card.expanded{background:var(--card-surface) padding-box,linear-gradient(var(--card-base),var(--card-base)) padding-box,var(--card-edge-hover) border-box;box-shadow:var(--card-shadow-hover)}
+.contact-item:hover{transform:translateY(-3px)}
+.hx-faq-i.open{background:var(--card-surface) padding-box,linear-gradient(var(--card-base),var(--card-base)) padding-box,var(--card-edge-hover) border-box}
+
+/* ── icon tiles: one consistent "app icon" look ── */
+.about-stat-icon,.contact-item-icon,.svc-card-icon,.career-card-icon-wrap,.sdp-icon-badge,.sdp-other-icon,.svcp-other-icon,.pg-stat-icon,.info-icon{
+  display:grid!important;place-items:center;flex-shrink:0;
+  width:48px;height:48px;border-radius:15px!important;font-size:1.35rem;
+  background:linear-gradient(145deg,color-mix(in srgb,var(--blue) 22%,transparent),color-mix(in srgb,var(--sky) 10%,transparent))!important;
+  border:1px solid color-mix(in srgb,var(--blue) 28%,transparent)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 8px 18px -10px color-mix(in srgb,var(--blue) 60%,transparent);
+  color:var(--blue);
+}
+.svc-card-icon{width:56px;height:56px;margin-bottom:6px}
+
+/* ══════════ WIDGETS: stat strips become separate KPI cards ══════════ */
+.pg-stats,.svcp-hero-stats,.career-hero-stats{
+  display:grid!important;gap:12px!important;padding:0!important;
+  background:none!important;border:0!important;box-shadow:none!important;overflow:visible!important;
+}
+.pg-stats{grid-template-columns:repeat(4,minmax(0,1fr))}
+.svcp-hero-stats{grid-template-columns:repeat(3,minmax(0,1fr));width:min(560px,100%);margin-inline:auto}
+.career-hero-stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+.pg-stat,.svcp-hero-stat,.career-hero-stat,.about-stat-card,.sdp-oc-stat,.fs-mini-stat,.hx-stat{
+  position:relative;overflow:hidden;text-align:left!important;
+  padding:18px 18px 16px!important;border-right:0!important;
+  background:var(--card-surface) padding-box,linear-gradient(var(--card-base),var(--card-base)) padding-box,var(--card-edge) border-box!important;
+  border:1px solid transparent!important;border-radius:20px!important;
+  box-shadow:var(--card-shadow);
+  transition:transform .3s var(--ease-out),box-shadow .3s;
+}
+.pg-stat:hover,.svcp-hero-stat:hover,.career-hero-stat:hover,.about-stat-card:hover,.hx-stat:hover{
+  transform:translateY(-4px);box-shadow:var(--card-shadow-hover);
+  background:var(--card-surface) padding-box,linear-gradient(var(--card-base),var(--card-base)) padding-box,var(--card-edge-hover) border-box!important;
+}
+/* live indicator + accent bar make each stat read as a dashboard widget */
+.pg-stat::before,.svcp-hero-stat::before,.career-hero-stat::before,.about-stat-card::before,.hx-stat::before{
+  content:'';position:absolute;top:14px;right:14px;width:7px;height:7px;border-radius:50%;
+  background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.16);
+}
+.pg-stat::after,.svcp-hero-stat::after,.career-hero-stat::after,.about-stat-card::after,.hx-stat::after{
+  content:'';position:absolute;left:18px;right:18px;bottom:0;height:3px;border-radius:3px 3px 0 0;
+  background:linear-gradient(90deg,var(--blue),var(--sky) 60%,var(--orange));opacity:.85;
+}
+.pg-stat-icon{margin:0 0 12px!important}
+.pg-stat-val,.about-stat-val{font-size:clamp(1.6rem,2.6vw,2.1rem)!important;letter-spacing:-.03em}
+.about-stat-icon{margin-bottom:12px}
+
+/* contact details as a 2×2 widget grid */
+.contact-items{display:grid!important;grid-template-columns:1fr 1fr;gap:12px!important}
+.contact-item{flex-direction:column;align-items:flex-start!important;gap:12px!important;padding:18px!important}
+.contact-item-val{word-break:break-word}
+
+/* forms inside cards */
+.contact-input,.career-input,.form-input{
+  border-radius:14px!important;border:1.5px solid var(--border-1)!important;background:color-mix(in srgb,var(--bg-0) 60%,transparent)!important;
+  transition:border-color .2s,box-shadow .2s!important;
+}
+.contact-input:focus,.career-input:focus,.form-input:focus{border-color:var(--blue)!important;box-shadow:0 0 0 4px color-mix(in srgb,var(--blue) 18%,transparent)!important;outline:0}
+[data-theme="light"] .contact-input,[data-theme="light"] .career-input{background:#fff!important}
+
+/* pills/badges → consistent soft chips */
+.svc-pill,.pg-tech-tag,.sdp-tech-tag,.career-skill{border-radius:99px!important}
+
+@media(max-width:900px){
+  .pg-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+  .svcp-hero-stats,.career-hero-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px!important}
+  .svcp-hero-stat,.career-hero-stat{padding:14px 12px 12px!important}
+  .svcp-hero-stat::before,.career-hero-stat::before{top:10px;right:10px;width:6px;height:6px}
+  .contact-items{grid-template-columns:1fr 1fr}
+  .contact-item{padding:14px!important}
+}
+@media(max-width:380px){
+  .contact-items{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .gcard,.svc-card,.pg-card,.contact-item,.career-job-card,.zz-mini,.pg-stat,.svcp-hero-stat,.career-hero-stat,.about-stat-card,.hx-stat{transition:none}
+}

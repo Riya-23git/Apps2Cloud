@@ -1,0 +1,175 @@
+{
+  "slug": "terms-of-service",
+  "title": "Terms of Service",
+  "updated": "October 8, 2026",
+  "seoDescription": "The terms that apply when you use the Apps2Cloud website and our software development, cloud hosting and WhatsApp Business integration services.",
+  "intro": "These terms set out the rules for using the Apps2Cloud website and the general conditions that apply to our software, hosting and integration services. Specific projects are also covered by the proposal or agreement we sign with you.",
+  "highlights": [
+    { "icon": "📄", "title": "Your project agreement comes first", "text": "If a signed proposal or agreement says something different from these terms, the agreement applies." },
+    { "icon": "🧑‍💻", "title": "Source code ownership", "text": "Unless your agreement says otherwise, custom source code becomes yours on completion and final payment." },
+    { "icon": "💬", "title": "WhatsApp rules apply", "text": "Businesses using our WhatsApp integrations must follow WhatsApp's own terms and messaging policies." },
+    { "icon": "✉️", "title": "Questions welcome", "text": "Contact support@apps2cloud.in about anything in these terms." }
+  ],
+  "sections": [
+    {
+      "id": "agreement",
+      "title": "Agreement to These Terms",
+      "blocks": [
+        { "p": "These Terms of Service (\"Terms\") apply to your use of the Apps2Cloud website at apps2cloud.in and to the services provided by Apps2Cloud (\"we\", \"our\", or \"us\")." },
+        { "p": "By using our website or services, you agree to these Terms. If you are using our services on behalf of a business, you confirm that you are authorised to accept these Terms for that business." }
+      ]
+    },
+    {
+      "id": "services",
+      "title": "Our Services",
+      "blocks": [
+        { "p": "Apps2Cloud provides software development and related services, including:" },
+        { "ul": [
+          "ERP, billing and business management software.",
+          "Custom web applications and business websites.",
+          "Android and iOS mobile apps.",
+          "Managed cloud hosting.",
+          "Business integrations, including WhatsApp Business integrations.",
+          "IT consulting."
+        ] },
+        { "p": "Descriptions of our services on this website are general information. The exact scope, features and timeline for your project are set out in your proposal or agreement." }
+      ]
+    },
+    {
+      "id": "project-agreements",
+      "title": "Proposals and Project Agreements",
+      "blocks": [
+        { "p": "Each project is governed by a written proposal, quotation or agreement that describes the scope, deliverables, timeline, fees and support terms." },
+        { "p": "If anything in a signed proposal or agreement conflicts with these Terms, the proposal or agreement applies for that project." },
+        { "p": "Changes to an agreed scope are made in writing and may affect the timeline and fees." }
+      ]
+    },
+    {
+      "id": "website-use",
+      "title": "Using Our Website",
+      "blocks": [
+        { "p": "You may use our website for lawful purposes only. You agree not to:" },
+        { "ul": [
+          "Attempt to gain unauthorised access to our website, systems or data.",
+          "Interfere with the website's operation, including by introducing malicious code.",
+          "Submit false information through our contact or careers forms.",
+          "Copy or reuse website content for commercial purposes without our permission."
+        ] }
+      ]
+    },
+    {
+      "id": "client-responsibilities",
+      "title": "Client Responsibilities",
+      "blocks": [
+        { "p": "When we work together on a project, you agree to:" },
+        { "ul": [
+          "Provide accurate information, content and timely feedback.",
+          "Ensure you have the right to use any content, data or materials you give us.",
+          "Keep your account credentials and access keys secure.",
+          "Use the software and services we provide in line with applicable law, including laws on data protection and electronic communications."
+        ] }
+      ]
+    },
+    {
+      "id": "whatsapp-integrations",
+      "title": "WhatsApp Business Integrations",
+      "blocks": [
+        { "p": "If we build or operate a WhatsApp Business integration for you:" },
+        { "ul": [
+          "Messages are sent from your own WhatsApp Business account, which you hold under your Meta business account.",
+          "You must comply with WhatsApp's Business Terms of Service, Business Messaging Policy and other applicable Meta terms.",
+          "You are responsible for obtaining your customers' opt-in before sending them business-initiated messages, and for the content of the templates you use.",
+          "Message templates are reviewed and approved by Meta. Approval decisions, account limits and any restrictions Meta applies are outside our control.",
+          "Meta charges for WhatsApp Business Platform messages according to its own pricing. These charges are separate from our fees unless your agreement says otherwise."
+        ] },
+        { "links": [
+          { "label": "WhatsApp Business Terms of Service", "href": "https://www.whatsapp.com/legal/business-terms" },
+          { "label": "WhatsApp Business Messaging Policy", "href": "https://business.whatsapp.com/policy" }
+        ] }
+      ]
+    },
+    {
+      "id": "fees",
+      "title": "Fees and Payment",
+      "blocks": [
+        { "p": "Fees, payment milestones and due dates are set out in your proposal or agreement." },
+        { "p": "Third-party costs, such as cloud hosting, domain names, app store accounts and WhatsApp messaging charges, are billed separately unless your agreement includes them." }
+      ]
+    },
+    {
+      "id": "intellectual-property",
+      "title": "Intellectual Property",
+      "blocks": [
+        { "p": "The content, design and branding of this website belong to Apps2Cloud." },
+        { "p": "Unless your agreement says otherwise, ownership of custom source code developed specifically for your project transfers to you on completion and final payment. Third-party software, open-source components and our pre-existing tools remain subject to their own licences." }
+      ]
+    },
+    {
+      "id": "confidentiality",
+      "title": "Confidentiality",
+      "blocks": [
+        { "p": "We treat information you share with us about your business and project as confidential, and we are happy to sign a non-disclosure agreement before you share sensitive details." },
+        { "p": "Personal information is handled as described in our Privacy Policy." }
+      ]
+    },
+    {
+      "id": "third-party-services",
+      "title": "Third-Party Services",
+      "blocks": [
+        { "p": "Our services may rely on third-party platforms, such as cloud providers, payment gateways and Meta's WhatsApp Business Platform. Those platforms operate under their own terms, and their availability or changes to them may affect the services we provide." }
+      ]
+    },
+    {
+      "id": "availability",
+      "title": "Availability and Support",
+      "blocks": [
+        { "p": "We make reasonable efforts to keep our website and the systems we host available, but we do not guarantee uninterrupted availability. Planned maintenance and events outside our control may cause interruptions." },
+        { "p": "Uptime commitments and support periods for a specific service are set out in your agreement." }
+      ]
+    },
+    {
+      "id": "disclaimers",
+      "title": "Disclaimers",
+      "blocks": [
+        { "p": "Information on this website is provided for general purposes and may change without notice. Except as set out in a written agreement, our website and services are provided \"as is\" without warranties of any kind, to the extent permitted by law." }
+      ]
+    },
+    {
+      "id": "liability",
+      "title": "Limitation of Liability",
+      "blocks": [
+        { "p": "To the extent permitted by law, Apps2Cloud is not liable for indirect or consequential losses, such as loss of profits, revenue or data, arising from use of our website or services." },
+        { "p": "Our total liability for any claim relating to a service is limited to the amount you paid for that service, unless your agreement states a different limit." }
+      ]
+    },
+    {
+      "id": "termination",
+      "title": "Suspension and Termination",
+      "blocks": [
+        { "p": "We may suspend or end access to our website or services if these Terms are seriously breached, or if required to comply with law or a third-party platform's requirements." },
+        { "p": "Termination of a project is handled as described in your agreement, including payment for work completed." }
+      ]
+    },
+    {
+      "id": "governing-law",
+      "title": "Governing Law",
+      "blocks": [
+        { "p": "These Terms are governed by the laws of India. Any dispute will be subject to the jurisdiction of the courts in Tamil Nadu, India." }
+      ]
+    },
+    {
+      "id": "changes",
+      "title": "Changes to These Terms",
+      "blocks": [
+        { "p": "We may update these Terms from time to time. Changes will be posted on this page with an updated \"Last updated\" date." }
+      ]
+    },
+    {
+      "id": "contact",
+      "title": "Contact Us",
+      "blocks": [
+        { "p": "If you have questions about these Terms, please contact us." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "short_name": "Apps2Cloud",
+  "name": "Apps2Cloud — Software Development Tamil Nadu",
+  "description": "ERP, Billing Software, Mobile Apps & Websites for Tamil Nadu businesses",
+  "icons": [
+    { "src": "favicon.ico", "sizes": "64x64", "type": "image/x-icon" },
+    { "src": "logo192.png", "type": "image/png", "sizes": "192x192" }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#3b82f6",
+  "background_color": "#030712"
+}

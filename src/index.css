@@ -1,0 +1,267 @@
+/* ═══════════════════════════════════════════════
+   AppsTECH v2 — GLOBAL DESIGN SYSTEM
+   Premium SaaS · AWS/Vercel/DigitalOcean Quality
+═══════════════════════════════════════════════ */
+
+:root {
+  /* Charcoal + Orange palette. --blue, --sky and --cyan keep their names because every
+     stylesheet references them; they now hold the orange accent shades.
+     ── Dark Mode (default) ── */
+  --bg-0: #17181b;
+  --bg-1: #1d1f23;
+  --bg-2: #25272c;
+  --bg-3: #2e3036;
+  --bg-card: rgba(255,255,255,0.04);
+  --bg-card-h: rgba(255,255,255,0.07);
+  --bg-glass: rgba(23,24,27,0.8);
+  --bg-modal: rgba(15,16,18,0.94);
+
+  --text-0: #f5f5f4;
+  --text-1: #d6d3d1;
+  --text-2: #a8a29e;
+  --text-3: #8f8a84;
+
+  --blue: #fb923c;
+  --blue-d: #ea580c;
+  --sky: #fdba74;
+  --cyan: #fdba74;
+  --orange: #f97316;
+  --purple: #fdba74;
+  --green: #22c55e;
+  --amber: #f59e0b;
+  --pink: #fb923c;
+  --red: #ef4444;
+
+  /* dark enough for white button text to reach 4.5:1 */
+  --grad-brand: linear-gradient(135deg,#b83c0a 0%,#c2410c 45%,#cf4a0b 100%);
+  --grad-text: linear-gradient(100deg,#fb923c,#fdba74);
+  --grad-accent: linear-gradient(135deg,#c2410c,#cf4a0b);
+  --grad-blue: var(--grad-brand);
+  --grad-purple: linear-gradient(135deg,#9a3412,#c2410c);
+  --grad-green: linear-gradient(135deg,#16a34a,#15803d);
+  --grad-amber: var(--grad-accent);
+  --grad-pink: linear-gradient(135deg,#c2410c,#f97316);
+
+  --border-0: rgba(214,211,209,0.1);
+  --border-1: rgba(214,211,209,0.16);
+  --border-blue: rgba(251,146,60,0.45);
+
+  --shadow-card: 0 10px 34px rgba(0,0,0,0.5);
+  --shadow-glow-blue: 0 0 48px rgba(251,146,60,0.14);
+  --shadow-glow-cyan: 0 0 48px rgba(253,186,116,0.12);
+  --shadow-btn: 0 8px 24px rgba(194,65,12,0.35);
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  --nav-h: 69px;
+  /* one standard typeface for every page */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-h: var(--font-sans);
+  --font-b: var(--font-sans);
+  --font-display: var(--font-sans);
+  --font-body: var(--font-sans);
+  --font-m: 'JetBrains Mono', monospace;
+
+  --ease-spring: cubic-bezier(0.34,1.56,0.64,1);
+  --ease-out: cubic-bezier(0.25,0.46,0.45,0.94);
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg-0: #faf9f7;
+  --bg-1: #f4f2ef;
+  --bg-2: #e9e6e2;
+  --bg-3: #dedad5;
+  --bg-card: #ffffff;
+  --bg-card-h: #ffffff;
+  --bg-glass: rgba(255,255,255,0.86);
+  --bg-modal: rgba(250,249,247,0.97);
+
+  --text-0: #1c1917;
+  --text-1: #44403c;
+  --text-2: #57534e;
+  --text-3: #6b6560;
+
+  --blue: #c2410c;
+  --blue-d: #9a3412;
+  --sky: #b45309;
+  --cyan: #b45309;
+  --orange: #c2410c;
+  --purple: #9a3412;
+
+  --grad-text: linear-gradient(100deg,#c2410c,#ea580c);
+
+  --border-0: rgba(28,25,23,0.07);
+  --border-1: rgba(28,25,23,0.12);
+  --border-blue: rgba(194,65,12,0.35);
+
+  --shadow-card: 0 1px 2px rgba(28,25,23,0.04), 0 8px 28px rgba(28,25,23,0.08);
+  --shadow-glow-blue: 0 0 40px rgba(194,65,12,0.10);
+  --shadow-btn: 0 8px 22px rgba(194,65,12,0.28);
+  color-scheme: light;
+}
+
+/* ── Reset ── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:var(--font-b);
+  background:var(--bg-0);
+  color:var(--text-0);
+  line-height:1.6;
+  word-spacing:.06em; /* Plus Jakarta Sans has a narrow word gap */
+  overflow-x:hidden;
+  overflow-x:clip; /* clip keeps position:sticky working; hidden is the fallback */
+  transition:background .4s ease,color .4s ease;
+}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer}
+button,input,select,textarea{font-family:inherit}
+img{max-width:100%;display:block}
+h1,h2,h3,h4,h5{font-family:var(--font-h);line-height:1.18;color:var(--text-0)}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg-1)}
+::-webkit-scrollbar-thumb{background:var(--border-blue);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--blue)}
+::selection{background:color-mix(in srgb,var(--blue) 30%,transparent)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+/* ── Container ── */
+.container{max-width:1200px;margin:0 auto;padding:0 28px}
+
+/* ── Typography ── */
+.gradient-text{
+  background:var(--grad-text);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.mono{font-family:var(--font-m)}
+
+/* ── Section Tag ── */
+.stag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-h);font-size:.72rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--blue);
+  background:color-mix(in srgb,var(--blue) 10%,transparent);border:1px solid color-mix(in srgb,var(--blue) 24%,transparent);
+  padding:5px 14px;border-radius:100px;margin-bottom:18px;
+}
+.stag::before{
+  content:'';width:6px;height:6px;background:var(--orange);
+  border-radius:50%;animation:pulse 2s infinite;
+}
+
+/* ── Section titles ── */
+.stitle{
+  font-size:clamp(2rem,4vw,2.9rem);font-weight:800;
+  letter-spacing:-.03em;margin-bottom:14px;
+}
+.ssub{
+  font-size:1.05rem;color:var(--text-2);
+  max-width:560px;line-height:1.75;
+}
+
+/* ── Buttons ── */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 26px;border-radius:var(--radius-sm);
+  font-family:var(--font-h);font-size:.88rem;font-weight:600;
+  border:none;transition:all .3s var(--ease-spring);
+  position:relative;overflow:hidden;white-space:nowrap;
+  cursor:pointer;
+}
+.btn-p{
+  background:var(--grad-brand);color:#fff;
+  box-shadow:var(--shadow-btn);
+}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(194,65,12,.45);filter:saturate(1.1)}
+.btn-o{
+  background:transparent;color:var(--text-0);
+  border:1.5px solid var(--border-1);
+}
+.btn-o:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+.btn-ghost{
+  background:var(--bg-card);color:var(--text-1);
+  border:1px solid var(--border-0);
+}
+.btn-ghost:hover{background:var(--bg-card-h);border-color:var(--border-blue)}
+.btn-sm{padding:9px 18px;font-size:.8rem;border-radius:8px}
+.btn-lg{padding:16px 36px;font-size:1rem}
+
+/* ── Glass Card ── */
+.gcard{
+  background:var(--bg-card);
+  border:1px solid var(--border-0);
+  border-radius:var(--radius-md);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  transition:all .35s var(--ease-spring);
+}
+.gcard:hover{
+  background:var(--bg-card-h);
+  border-color:var(--border-blue);
+  transform:translateY(-5px);
+  box-shadow:var(--shadow-glow-blue),var(--shadow-card);
+}
+
+/* ── Animations ── */
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideIn{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:translateX(0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+@keyframes modalIn{
+  from{opacity:0;transform:translateY(24px) scale(.97)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+
+.anim-up{animation:fadeUp .6s var(--ease-out) both}
+.anim-in{animation:fadeIn .5s var(--ease-out) both}
+
+/* ── Section spacing ── */
+section{padding:96px 0}
+.section-gap{padding:80px 0}
+
+/* ── Divider ── */
+.divider{border:none;border-top:1px solid var(--border-0);margin:0}
+
+/* ── Scrollbar in modals ── */
+.modal-scroll::-webkit-scrollbar{width:4px}
+.modal-scroll::-webkit-scrollbar-thumb{background:var(--border-1)}
+
+/* ── WhatsApp Float ── */
+.wa-float{
+  position:fixed;bottom:28px;right:28px;
+  width:54px;height:54px;background:#25d366;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(37,211,102,.4);
+  z-index:9998;transition:all .3s ease;
+  animation:float 4s ease-in-out infinite;
+}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 8px 28px rgba(37,211,102,.6)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+
+/* ── Responsive ── */
+/* matches the fixed navbar height so page content and sticky bars sit right under it */
+@media(max-width:1020px){
+  :root{--nav-h:59px}
+}
+@media(max-width:768px){
+  section{padding:64px 0}
+  .container{padding:0 16px}
+  .btn{padding:11px 20px}
+}
+@media(max-width:480px){
+  section{padding:52px 0}
+}
+
+/* ── Service line icons ── */
+.svc-line-ico{color:var(--blue);display:block;flex-shrink:0}

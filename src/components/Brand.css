@@ -1,0 +1,15 @@
+/* ═══════ Brand (logo image) ═══════ */
+.brand{
+  --brand-h:40px;
+  display:inline-flex;align-items:center;flex-shrink:0;text-decoration:none;line-height:1;
+}
+.brand-sm{--brand-h:32px}
+.brand-lg{--brand-h:46px}
+
+.brand-img{display:block;height:var(--brand-h);width:auto;transition:height .3s,transform .4s var(--ease-spring)}
+.brand:hover .brand-img{transform:translateY(-1px)}
+
+/* charcoal logo on light surfaces, white logo on dark ones */
+.brand-img-dark{display:none}
+[data-theme="dark"] .brand-img-light,.brand.brand-light .brand-img-light{display:none}
+[data-theme="dark"] .brand-img-dark,.brand.brand-light .brand-img-dark{display:block}

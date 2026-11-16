@@ -1,0 +1,448 @@
+/* ═══════ Home hero — photo background with project finder ═══════ */
+/* The photo is dark in both themes, so hero text uses fixed light colours rather than theme tokens. */
+.bh {
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
+  overflow: clip visible;
+  color: #fff;
+  margin-top: calc(-1 * var(--nav-h));
+  min-height: clamp(520px, 72vh, 680px);
+  min-height: clamp(520px, 72svh, 680px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--nav-h) + 24px) 20px 44px;
+}
+
+.bh-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: #1a0f0a url("../assets/hero-cloud-network.svg") center / cover no-repeat;
+}
+
+/* darkens the photo behind the text so it stays readable over the bright circuit lines */
+.bh-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(70% 70% at 50% 50%, rgba(117, 86, 67, 0.263) 30%, rgba(12, 9, 7, .28) 100%);
+}
+
+.bh-inner {
+  width: 100%;
+  max-width: 920px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: bhIn .8s var(--ease-out) both
+}
+
+@keyframes bhIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px)
+  }
+
+  to {
+    opacity: 1;
+    transform: none
+  }
+}
+
+.bh-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 50px 0 16px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-family: var(--font-h);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .24);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.bh-live {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, .25);
+  animation: pulse 2s infinite
+}
+
+.bh-title {
+  font-family: var(--font-h);
+  font-size: clamp(2.1rem, 4.4vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -.035em;
+  line-height: 1.05;
+  margin: 0 0 18px;
+  color: #fff;
+  text-wrap: balance;
+}
+
+.bh-title span {
+  display: inline-block;
+  padding-bottom: .06em;
+  background: linear-gradient(100deg, #fb923c, #fdba74);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bh-sub {
+  font-size: clamp(.95rem, 1.2vw, 1.05rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, .9);
+  max-width: 640px;
+  margin: 0 0 26px;
+  text-wrap: balance
+}
+
+/* project finder */
+.bh-search {
+  width: 100%;
+  max-width: 880px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 8px 8px 22px;
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, .14), 0 24px 60px rgba(0, 0, 0, .4);
+  transition: box-shadow .3s;
+}
+
+.bh-search:focus-within {
+  box-shadow: 0 0 0 10px rgba(253, 186, 116, .3), 0 24px 60px rgba(0, 0, 0, .45)
+}
+
+.bh-field {
+  flex: 1 1 0;
+  min-width: 0
+}
+
+.bh-lbl {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #c2410c;
+  padding-left: 27px
+}
+
+.bh-ctl {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  color: #78716a
+}
+
+.bh-ctl svg {
+  flex-shrink: 0
+}
+
+.bh-sep {
+  width: 1px;
+  height: 34px;
+  background: #f1ebe4;
+  flex-shrink: 0;
+  margin: 0 10px
+}
+
+.bh-go {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 52px;
+  padding: 0 24px;
+  margin-left: 8px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: var(--font-h);
+  font-size: .95rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  background: var(--grad-brand);
+  box-shadow: 0 8px 20px rgba(194, 65, 12, .45);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.bh-go svg {
+  transition: transform .2s
+}
+
+.bh-go:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(194, 65, 12, .55)
+}
+
+.bh-go:hover svg {
+  transform: translateX(3px)
+}
+
+.bh-go:focus-visible,
+.bh-pill:focus-visible {
+  outline: 2px solid #fdba74;
+  outline-offset: 2px
+}
+
+.bh-ask {
+  font-family: var(--font-h);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin: 24px 0 12px;
+  color: rgba(255, 255, 255, .82)
+}
+
+.bh-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px
+}
+
+.bh-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, .4);
+  background: rgba(255, 255, 255, .08);
+  color: #fff;
+  font-family: var(--font-h);
+  font-size: .92rem;
+  font-weight: 600;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background .2s, border-color .2s, color .2s, transform .2s;
+}
+
+.bh-pill:hover {
+  background: var(--grad-brand);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-2px)
+}
+
+.bh-trust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 26px;
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  font-size: .86rem;
+  color: rgba(255, 255, 255, .88)
+}
+
+.bh-trust li::before {
+  content: '✓';
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  border-radius: 50%;
+  font-size: .65rem;
+  font-weight: 800;
+  color: #052e16;
+  background: #4ade80
+}
+
+.bh-scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+  width: 26px;
+  height: 42px;
+  margin-left: -13px;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, .5)
+}
+
+.bh-scroll span {
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  width: 4px;
+  height: 8px;
+  margin-left: -2px;
+  border-radius: 2px;
+  background: #fff;
+  animation: bhWheel 1.8s ease-in-out infinite
+}
+
+@keyframes bhWheel {
+  0% {
+    opacity: 0;
+    transform: translateY(0)
+  }
+
+  30% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(14px)
+  }
+}
+
+/* ── responsive ── */
+/* the shorter hero leaves no room for the scroll hint below the trust list */
+@media all {
+  .bh-scroll {
+    display: none
+  }
+}
+
+@media(max-height:820px) and (min-width:861px) {
+  .bh-eyebrow {
+    margin-bottom: 16px
+  }
+
+  .bh-sub {
+    margin-bottom: 28px
+  }
+
+  .bh-ask {
+    margin-top: 26px
+  }
+
+  .bh-trust {
+    margin-top: 26px
+  }
+}
+
+@media(max-width:860px) {
+  .bh-search {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    padding: 10px;
+    border-radius: 26px;
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, .14), 0 24px 60px rgba(0, 0, 0, .4)
+  }
+
+  .bh-sep {
+    display: none
+  }
+
+  .bh-trigger {
+    padding: 10px 12px;
+    border-radius: 16px;
+    background: #faf8f5
+  }
+
+  .pk.is-open .bh-trigger {
+    background: #f8f4f1;
+    box-shadow: inset 0 0 0 1.5px #c2410c
+  }
+
+  .bh-lbl {
+    padding-left: 0
+  }
+
+  .bh-go {
+    grid-column: 1 / -1;
+    justify-content: center;
+    width: 100%;
+    margin: 2px 0 0;
+    height: 52px
+  }
+}
+
+@media(max-width:600px) {
+  .bh-search {
+    grid-template-columns: 1fr
+  }
+
+  .bh-trigger {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 14px
+  }
+
+  .bh-lbl {
+    flex-shrink: 0;
+    width: 58px;
+    font-size: .66rem
+  }
+}
+
+@media(max-width:560px) {
+  .bh-pills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px
+  }
+
+  .bh-pill {
+    justify-content: center;
+    padding: 11px 10px;
+    font-size: .84rem
+  }
+}
+
+@media(max-width:480px) {
+  .bh {
+    padding-bottom: 56px
+  }
+
+  .bh-eyebrow {
+    font-size: .64rem;
+    letter-spacing: .12em;
+    padding: 6px 14px
+  }
+}
+
+@media(max-width:400px) {
+  .bh-pills {
+    gap: 8px
+  }
+
+  .bh-pill {
+    gap: 6px;
+    padding: 11px 6px;
+    font-size: .8rem;
+    white-space: nowrap
+  }
+
+  .bh-pill svg {
+    width: 16px;
+    height: 16px
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .bh-inner,
+  .bh-live,
+  .bh-scroll span {
+    animation: none
+  }
+}

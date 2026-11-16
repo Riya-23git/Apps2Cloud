@@ -1,0 +1,182 @@
+{
+  "slug": "privacy-policy",
+  "title": "Privacy Policy",
+  "updated": "October 8, 2026",
+  "seoDescription": "How Apps2Cloud collects, uses, shares and protects personal information across its website, software and services, including WhatsApp Business and Meta API integrations, and how to request access or deletion.",
+  "intro": "This policy explains what information Apps2Cloud collects, why we collect it, how we protect it, and the choices you have — whether you are visiting our website, working with us on a project, or receiving messages from a business that uses software we built.",
+  "highlights": [
+    { "icon": "🚫", "title": "We don't sell your data", "text": "We do not sell or rent personal information, including information processed through WhatsApp integrations." },
+    { "icon": "💬", "title": "WhatsApp on Meta's platform", "text": "Business messages are sent through Meta's WhatsApp Business Platform, from the business's own account, using approved templates." },
+    { "icon": "🗂️", "title": "You stay in control", "text": "You can ask us to access, correct or delete your personal information." },
+    { "icon": "✉️", "title": "Real people answer", "text": "Privacy questions go to support@apps2cloud.in and are handled by our team." }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "Introduction",
+      "blocks": [
+        { "p": "Apps2Cloud (\"we\", \"our\", or \"us\") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, and protect information when you use our website, applications, software, and services." },
+        { "p": "By using our services, you acknowledge that you have read and understood this Privacy Policy." }
+      ]
+    },
+    {
+      "id": "scope",
+      "title": "Scope of This Policy",
+      "blocks": [
+        { "p": "This policy applies to:" },
+        { "ul": [
+          "Our website at apps2cloud.in, including its contact and careers forms.",
+          "Communication with us by email, phone or WhatsApp.",
+          "Software, mobile apps, hosting and business integrations that we build, operate or support, including ERP, billing and WhatsApp Business integrations."
+        ] },
+        { "p": "When we build or operate a system for a business client, that business decides what information its system collects about its own customers. In those cases we handle that information on the business's behalf and in line with our agreement with them, and the business's own privacy policy also applies." }
+      ]
+    },
+    {
+      "id": "information-we-collect",
+      "title": "Information We Collect",
+      "blocks": [
+        { "h3": "Information you provide" },
+        { "p": "Depending on the service you use, we may collect information such as your name, phone number, email address, business details, account information, and other information you voluntarily provide." },
+        { "p": "For example, when you send an enquiry we receive your name, contact details and project description. When you apply for a role through our Careers page, we receive the details you submit, such as your experience, portfolio link and CV." },
+        { "h3": "Information collected automatically" },
+        { "p": "We may automatically collect technical information such as IP address, browser type, device information, operating system, approximate location, access times, and usage information." },
+        { "h3": "Information processed through business systems and integrations" },
+        { "p": "When a business uses software or integrations we provide, we may process information about that business's customers to deliver the service. This can include customer names, phone numbers, order, invoice and delivery details, and the status of messages sent to them." }
+      ]
+    },
+    {
+      "id": "how-we-use-information",
+      "title": "How We Use Your Information",
+      "blocks": [
+        { "ul": [
+          "To provide and operate our services.",
+          "To create and manage user accounts.",
+          "To respond to enquiries and prepare proposals.",
+          "To communicate with you about our services.",
+          "To send notifications that a business has configured in its own systems, such as order, billing and delivery updates.",
+          "To provide customer support.",
+          "To improve our applications, websites, and services.",
+          "To maintain security and prevent unauthorized activity.",
+          "To comply with applicable legal requirements."
+        ] }
+      ]
+    },
+    {
+      "id": "whatsapp-and-meta",
+      "title": "WhatsApp and Meta Services",
+      "blocks": [
+        { "p": "Some Apps2Cloud services may integrate with Meta platforms, including WhatsApp Business and related APIs." },
+        { "p": "When you use a WhatsApp or Meta integration, information may be processed through the relevant Meta services according to their applicable terms and privacy policies." },
+        { "p": "Apps2Cloud does not sell personal information obtained through these integrations." },
+        { "h3": "What is processed" },
+        { "p": "When a business sends WhatsApp notifications through an integration we provide, the following may be processed:" },
+        { "ul": [
+          "The recipient's WhatsApp phone number.",
+          "The content of the approved message template and the details inserted into it, such as an order number, invoice amount or delivery date.",
+          "Message identifiers and timestamps.",
+          "Status events reported by WhatsApp, such as sent, delivered, read or failed."
+        ] },
+        { "h3": "How it works" },
+        { "p": "Messages are sent from the business's own WhatsApp Business account through Meta's WhatsApp Cloud API and Graph API. WhatsApp reports message status back to the business's system through secured webhooks. Read status is only reported when the recipient has read receipts turned on in WhatsApp." },
+        { "p": "We use information processed through these integrations only to provide and support the messaging features configured for the business." },
+        { "h3": "Consent and opting out" },
+        { "p": "Businesses are responsible for obtaining a customer's opt-in before sending them business-initiated WhatsApp messages, as required by WhatsApp's policies. If you no longer want to receive messages from a business, you can contact that business, or block its number in WhatsApp at any time." },
+        { "links": [
+          { "label": "Meta Privacy Policy", "href": "https://www.facebook.com/privacy/policy" },
+          { "label": "WhatsApp Privacy Policy", "href": "https://www.whatsapp.com/legal/privacy-policy" }
+        ] }
+      ]
+    },
+    {
+      "id": "sharing",
+      "title": "Sharing of Information",
+      "blocks": [
+        { "p": "We do not sell or rent your personal information. Information may be shared with service providers or technology partners when necessary to provide, maintain, secure, or improve our services." },
+        { "p": "These may include cloud hosting providers, email and communication services, and messaging platforms such as Meta's WhatsApp Business Platform. They may use the information only to provide their services to us or to the business concerned." },
+        { "p": "We may also disclose information when required by law, regulation, legal process, or to protect the rights and security of our users, business, or services." }
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Data Security",
+      "blocks": [
+        { "p": "We use reasonable technical and organizational measures to protect information against unauthorized access, alteration, disclosure, or destruction." },
+        { "p": "Depending on the system, these measures may include encrypted connections (HTTPS), role-based access controls, and verification of incoming webhook requests." },
+        { "p": "However, no method of transmission or electronic storage is completely secure, and we cannot guarantee absolute security." }
+      ]
+    },
+    {
+      "id": "retention",
+      "title": "Data Retention",
+      "blocks": [
+        { "p": "We retain personal information only for as long as reasonably necessary to provide our services, fulfill business purposes, resolve disputes, maintain security, and comply with legal obligations." },
+        { "p": "Information held in a system we operate for a business client is kept according to that client's instructions and our agreement with them." }
+      ]
+    },
+    {
+      "id": "your-rights",
+      "title": "Your Rights",
+      "blocks": [
+        { "p": "Depending on applicable law, you may have rights to request access, correction, deletion, or other actions relating to your personal information." },
+        { "p": "You can contact us using the information below for privacy-related requests. We may need to verify your identity before acting on a request." },
+        { "p": "If your information is held in a business's system that we operate, you can contact that business directly, or contact us and we will pass your request to them." }
+      ]
+    },
+    {
+      "id": "data-deletion",
+      "title": "How to Request Data Deletion",
+      "blocks": [
+        { "p": "To ask us to delete personal information, including information processed through a WhatsApp integration:" },
+        { "ol": [
+          "Email support@apps2cloud.in with the subject \"Data deletion request\".",
+          "Include the phone number or email address the information relates to, and the business or service involved if you know it.",
+          "We will confirm receipt, verify the request, and let you know when deletion is complete or if any information must be kept to meet a legal obligation."
+        ] }
+      ]
+    },
+    {
+      "id": "cookies",
+      "title": "Cookies",
+      "blocks": [
+        { "p": "Our website may use cookies and similar technologies to improve functionality, understand website usage, maintain security, and provide a better user experience." },
+        { "p": "For example, our website stores your light or dark theme choice in your browser so it is remembered on your next visit. You can clear or block cookies and stored site data in your browser settings." }
+      ]
+    },
+    {
+      "id": "third-party-services",
+      "title": "Third-Party Services",
+      "blocks": [
+        { "p": "Our services may contain links to or integrations with third-party services. Those services operate under their own privacy policies. We recommend reviewing the privacy policies of third-party services that you use." }
+      ]
+    },
+    {
+      "id": "processing-location",
+      "title": "Where Information Is Processed",
+      "blocks": [
+        { "p": "Some service providers we work with, including Meta, may process information on servers located outside your country. Where this happens, the information remains subject to this policy and to the provider's own terms." }
+      ]
+    },
+    {
+      "id": "childrens-privacy",
+      "title": "Children's Privacy",
+      "blocks": [
+        { "p": "Our services are not intended to knowingly collect personal information from children in violation of applicable law. If you believe that a child has provided personal information to us, please contact us so that we can take appropriate action." }
+      ]
+    },
+    {
+      "id": "changes",
+      "title": "Changes to This Privacy Policy",
+      "blocks": [
+        { "p": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated \"Last updated\" date." }
+      ]
+    },
+    {
+      "id": "contact",
+      "title": "Contact Us",
+      "blocks": [
+        { "p": "If you have questions about this Privacy Policy or our data practices, please contact us." }
+      ]
+    }
+  ]
+}

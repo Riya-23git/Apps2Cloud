@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://apps2cloud.in/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://apps2cloud.in/services</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://apps2cloud.in/services/erp-software</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apps2cloud.in/services/billing-software</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apps2cloud.in/services/mobile-apps</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apps2cloud.in/services/web-applications</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apps2cloud.in/services/construction-management</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apps2cloud.in/services/cloud-hosting</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apps2cloud.in/services/it-consulting</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apps2cloud.in/services/whatsapp-business</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://apps2cloud.in/portfolio</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apps2cloud.in/about</loc>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://apps2cloud.in/contact</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://apps2cloud.in/career</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://apps2cloud.in/privacy-policy.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://apps2cloud.in/terms-of-service.html</loc>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
